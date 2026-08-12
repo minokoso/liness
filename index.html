@@ -1,0 +1,4920 @@
+<!-- ============================================================
+     HALFTONE CUSTOMIZER
+     + CONNECTED PATTERN
+     + OBLIQUE SLASHES
+     + JPG EXPORT
+     + TRUE EDITABLE VECTOR SVG EXPORT
+     + COPY WEBFLOW EMBED
+============================================================= -->
+
+<div id="tw-halftone-root">
+
+  <div id="tw-halftone-mount"></div>
+
+  <div id="tw-halftone-panel" data-halftone-exclude>
+
+    <div class="tw-panel-header">
+      <strong>Halftone</strong>
+      <button id="tw-panel-close" type="button">×</button>
+    </div>
+
+
+    <!-- IMAGE / EXPORT -->
+    <div class="tw-control-section">
+
+      <div class="tw-section-label">
+        Image & Export
+      </div>
+
+      <div class="tw-button-grid">
+
+        <button id="tw-upload-button" type="button">
+          Upload image
+        </button>
+
+        <button id="tw-download-button" type="button">
+          Download JPG
+        </button>
+
+        <button id="tw-svg-button" type="button">
+          Download SVG
+        </button>
+
+        <button id="tw-copy-embed-button" type="button">
+          Copy Embed
+        </button>
+
+      </div>
+
+      <div id="tw-svg-status"></div>
+
+      <input
+        id="tw-image-upload"
+        type="file"
+        accept="image/*"
+        hidden
+      >
+
+    </div>
+
+
+    <!-- PATTERN -->
+    <div class="tw-control-section">
+
+      <div class="tw-section-label">
+        Pattern
+      </div>
+
+
+      <label class="tw-control">
+        <span>Grid angle</span>
+
+        <div>
+          <input
+            id="tw-angle"
+            type="range"
+            min="-90"
+            max="90"
+            step="1"
+            value="0"
+          >
+          <output>0°</output>
+        </div>
+      </label>
+
+
+      <div class="tw-angle-presets">
+
+        <button data-angle="0" type="button">
+          Horizontal
+        </button>
+
+        <button data-angle="30" type="button">
+          30°
+        </button>
+
+        <button data-angle="45" type="button">
+          45°
+        </button>
+
+        <button data-angle="-45" type="button">
+          -45°
+        </button>
+
+      </div>
+
+
+      <label class="tw-control">
+        <span>Spacing</span>
+
+        <div>
+          <input
+            id="tw-scale"
+            type="range"
+            min="5"
+            max="30"
+            step="1"
+            value="12"
+          >
+          <output>12</output>
+        </div>
+      </label>
+
+
+      <label class="tw-control">
+        <span>Thickness</span>
+
+        <div>
+          <input
+            id="tw-width"
+            type="range"
+            min="0.05"
+            max="1"
+            step="0.01"
+            value="0.34"
+          >
+          <output>0.34</output>
+        </div>
+      </label>
+
+
+      <label class="tw-control">
+        <span>Connection</span>
+
+        <div>
+          <input
+            id="tw-connection"
+            type="range"
+            min="0.5"
+            max="1.5"
+            step="0.01"
+            value="1"
+          >
+          <output>1.00</output>
+        </div>
+      </label>
+
+
+      <label class="tw-control">
+        <span>Slash slant</span>
+
+        <div>
+          <input
+            id="tw-oblique"
+            type="range"
+            min="-2"
+            max="2"
+            step="0.01"
+            value="1"
+          >
+          <output>1.00</output>
+        </div>
+      </label>
+
+    </div>
+
+
+    <!-- IMAGE TONE -->
+    <div class="tw-control-section">
+
+      <div class="tw-section-label">
+        Image tone
+      </div>
+
+
+      <label class="tw-control">
+        <span>Contrast</span>
+
+        <div>
+          <input
+            id="tw-contrast"
+            type="range"
+            min="0.1"
+            max="3"
+            step="0.05"
+            value="1"
+          >
+          <output>1.00</output>
+        </div>
+      </label>
+
+
+      <label class="tw-control">
+        <span>Power</span>
+
+        <div>
+          <input
+            id="tw-power"
+            type="range"
+            min="-0.5"
+            max="0.5"
+            step="0.01"
+            value="-0.07"
+          >
+          <output>-0.07</output>
+        </div>
+      </label>
+
+
+      <label class="tw-control">
+        <span>Min tone</span>
+
+        <div>
+          <input
+            id="tw-minimum-tone"
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0"
+          >
+          <output>0.00</output>
+        </div>
+      </label>
+
+    </div>
+
+
+    <!-- CURSOR -->
+    <div class="tw-control-section">
+
+      <div class="tw-section-label">
+        Cursor
+      </div>
+
+
+      <label class="tw-control">
+        <span>Strength</span>
+
+        <div>
+          <input
+            id="tw-light-intensity"
+            type="range"
+            min="0"
+            max="3"
+            step="0.05"
+            value="0.8"
+          >
+          <output>0.80</output>
+        </div>
+      </label>
+
+
+      <label class="tw-control">
+        <span>Radius</span>
+
+        <div>
+          <input
+            id="tw-light-radius"
+            type="range"
+            min="0.02"
+            max="0.5"
+            step="0.01"
+            value="0.14"
+          >
+          <output>0.14</output>
+        </div>
+      </label>
+
+
+      <label class="tw-control">
+        <span>Follow</span>
+
+        <div>
+          <input
+            id="tw-follow"
+            type="range"
+            min="0.01"
+            max="1"
+            step="0.01"
+            value="0.38"
+          >
+          <output>0.38</output>
+        </div>
+      </label>
+
+    </div>
+
+
+    <!-- COLORS -->
+    <div class="tw-control-section">
+
+      <div class="tw-section-label">
+        Colors
+      </div>
+
+
+      <label class="tw-color-control">
+        <span>Lines</span>
+
+        <input
+          id="tw-line-color"
+          type="color"
+          value="#4a38f5"
+        >
+      </label>
+
+
+      <label class="tw-color-control">
+        <span>Background</span>
+
+        <input
+          id="tw-bg-color"
+          type="color"
+          value="#ffffff"
+        >
+      </label>
+
+    </div>
+
+
+    <button
+      id="tw-reset"
+      class="tw-reset"
+      type="button"
+    >
+      Reset settings
+    </button>
+
+  </div>
+
+
+  <button
+    id="tw-panel-open"
+    data-halftone-exclude
+    type="button"
+  >
+    Controls
+  </button>
+
+</div>
+
+
+<style>
+#tw-halftone-root {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+#tw-halftone-mount {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+#tw-halftone-mount canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ============================================================
+   PANEL
+============================================================= */
+
+#tw-halftone-panel {
+  position: absolute;
+  z-index: 30;
+  top: 16px;
+  left: 16px;
+
+  width: 310px;
+  max-width: calc(100% - 32px);
+  max-height: calc(100% - 32px);
+
+  overflow-y: auto;
+
+  box-sizing: border-box;
+
+  padding: 14px;
+
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 8px;
+
+  background: rgba(255,255,255,.94);
+
+  box-shadow:
+    0 12px 40px rgba(0,0,0,.08);
+
+  backdrop-filter: blur(16px);
+
+  font-family: Arial, sans-serif;
+  color: #111;
+}
+
+.tw-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+#tw-panel-close {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 5px;
+
+  background: #fff;
+  cursor: pointer;
+}
+
+.tw-control-section {
+  padding: 12px 0;
+
+  border-top:
+    1px solid rgba(0,0,0,.08);
+}
+
+.tw-section-label {
+  margin-bottom: 10px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: .08em;
+  text-transform: uppercase;
+
+  opacity: .45;
+}
+
+.tw-control {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 10px;
+  align-items: center;
+
+  margin-bottom: 9px;
+
+  font-size: 11px;
+}
+
+.tw-control > div {
+  display: grid;
+  grid-template-columns: 1fr 44px;
+  gap: 6px;
+  align-items: center;
+}
+
+.tw-control input[type="range"] {
+  width: 100%;
+  margin: 0;
+}
+
+.tw-control output {
+  text-align: right;
+
+  font-family: monospace;
+  font-size: 10px;
+
+  opacity: .55;
+}
+
+.tw-color-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+
+  font-size: 11px;
+}
+
+.tw-color-control input {
+  width: 54px;
+  height: 28px;
+  padding: 1px;
+
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 4px;
+
+  background: #fff;
+}
+
+.tw-button-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.tw-angle-presets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+
+  margin-bottom: 10px;
+}
+
+.tw-button-grid button,
+.tw-angle-presets button,
+.tw-reset,
+#tw-panel-open {
+  min-height: 32px;
+  padding: 0 8px;
+
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 5px;
+
+  background: #fff;
+  color: #111;
+
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+.tw-button-grid button:hover,
+.tw-angle-presets button:hover,
+.tw-reset:hover,
+#tw-panel-open:hover,
+#tw-panel-close:hover {
+  background: #f4f4f4;
+}
+
+.tw-reset {
+  width: 100%;
+  margin-top: 4px;
+}
+
+#tw-panel-open {
+  position: absolute;
+  z-index: 30;
+  top: 16px;
+  left: 16px;
+
+  display: none;
+
+  padding: 0 12px;
+}
+
+#tw-svg-status {
+  min-height: 14px;
+  margin-top: 7px;
+
+  font-family: monospace;
+  font-size: 9px;
+
+  opacity: .55;
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+
+
+<script>
+(() => {
+
+const root =
+  document.getElementById("tw-halftone-root");
+
+const mount =
+  document.getElementById("tw-halftone-mount");
+
+const panel =
+  document.getElementById("tw-halftone-panel");
+
+const panelOpen =
+  document.getElementById("tw-panel-open");
+
+const panelClose =
+  document.getElementById("tw-panel-close");
+
+const upload =
+  document.getElementById("tw-image-upload");
+
+const uploadButton =
+  document.getElementById("tw-upload-button");
+
+const downloadButton =
+  document.getElementById("tw-download-button");
+
+const svgButton =
+  document.getElementById("tw-svg-button");
+
+const svgStatus =
+  document.getElementById("tw-svg-status");
+
+const copyButton =
+  document.getElementById("tw-copy-embed-button");
+
+const resetButton =
+  document.getElementById("tw-reset");
+
+
+if (!root || !mount || !window.THREE) return;
+
+
+/* ============================================================
+   CONFIG
+============================================================= */
+
+const FULL_HD_WIDTH = 1920;
+const FULL_HD_HEIGHT = 1080;
+const BASE_REFERENCE_HEIGHT = 768;
+const FULL_HD_PATTERN_SCALE =
+  FULL_HD_HEIGHT / BASE_REFERENCE_HEIGHT;
+
+
+const DEFAULTS = {
+
+  imageUrl:
+    "https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-website/public/images/home/hero-bridge.webp",
+
+  lineAngle: 0,
+
+  oblique: 1,
+
+  scale: 12,
+
+  width: 0.34,
+
+  connection: 1,
+
+  virtualWidth: FULL_HD_WIDTH,
+
+  virtualHeight: FULL_HD_HEIGHT,
+
+  power: -0.07,
+
+  minimumTone: 0,
+
+  contrast: 1,
+
+  color: "#4a38f5",
+
+  background: "#ffffff",
+
+  lightIntensity: 0.8,
+
+  lightRadius: 0.14,
+
+  lightVerticalFade: 0.5,
+
+  follow: 0.38,
+
+  velocityDamping: 0.82,
+
+  fadeIn: 18,
+
+  fadeOut: 7,
+
+  exclude:
+    "[data-halftone-exclude]"
+};
+
+
+const C = {
+  ...DEFAULTS
+};
+
+
+let currentImageSource =
+  C.imageUrl;
+
+
+let currentImageElement =
+  null;
+
+
+/* ============================================================
+   THREE
+============================================================= */
+
+const renderer =
+  new THREE.WebGLRenderer({
+    alpha: true,
+    antialias: false,
+    preserveDrawingBuffer: true,
+    powerPreference: "high-performance"
+  });
+
+
+renderer.setPixelRatio(1);
+
+renderer.setClearColor(
+  0x000000,
+  0
+);
+
+renderer.outputEncoding =
+  THREE.sRGBEncoding;
+
+
+renderer.domElement.style.width =
+  "100%";
+
+renderer.domElement.style.height =
+  "100%";
+
+
+mount.appendChild(
+  renderer.domElement
+);
+
+
+const scene =
+  new THREE.Scene();
+
+
+const camera =
+  new THREE.OrthographicCamera(
+    -1,
+    1,
+    1,
+    -1,
+    0,
+    1
+  );
+
+
+const geometry =
+  new THREE.PlaneGeometry(
+    2,
+    2
+  );
+
+
+let texture = null;
+
+let virtualWidth =
+  C.virtualWidth;
+
+let virtualHeight =
+  C.virtualHeight;
+
+
+const pointer = {
+  inside: false,
+
+  mouseX: .5,
+  mouseY: .5,
+
+  smoothX: .5,
+  smoothY: .5,
+
+  velocityX: 0,
+  velocityY: 0,
+
+  hover: 0
+};
+
+
+/* ============================================================
+   UNIFORMS
+============================================================= */
+
+const uniforms = {
+
+  uImage: {
+    value: null
+  },
+
+  uImageSize: {
+    value:
+      new THREE.Vector2(
+        1,
+        1
+      )
+  },
+
+  uResolution: {
+    value:
+      new THREE.Vector2(
+        C.virtualWidth,
+        C.virtualHeight
+      )
+  },
+
+  uTile: {
+    value:
+      C.scale *
+      FULL_HD_PATTERN_SCALE
+  },
+
+  uDashWidth: {
+    value:
+      C.width
+  },
+
+  uConnection: {
+    value:
+      C.connection
+  },
+
+  uOblique: {
+    value:
+      C.oblique
+  },
+
+  uLineAngle: {
+    value:
+      THREE.MathUtils.degToRad(
+        C.lineAngle
+      )
+  },
+
+  uPower: {
+    value:
+      C.power
+  },
+
+  uMinimumTone: {
+    value:
+      C.minimumTone
+  },
+
+  uContrast: {
+    value:
+      C.contrast
+  },
+
+  uPointer: {
+    value:
+      new THREE.Vector2(
+        .5,
+        .5
+      )
+  },
+
+  uPointerVelocity: {
+    value:
+      new THREE.Vector2(
+        0,
+        0
+      )
+  },
+
+  uHoverStrength: {
+    value: 0
+  },
+
+  uLightIntensity: {
+    value:
+      C.lightIntensity
+  },
+
+  uLightRadius: {
+    value:
+      C.lightRadius
+  },
+
+  uVerticalFade: {
+    value:
+      C.lightVerticalFade
+  },
+
+  uColor: {
+    value:
+      new THREE.Color(
+        C.color
+      )
+  }
+
+};
+
+
+/* ============================================================
+   SHADERS
+============================================================= */
+
+const vertexShader = `
+varying vec2 vUv;
+
+void main() {
+  vUv = uv;
+  gl_Position = vec4(position.xy, 0.0, 1.0);
+}
+`;
+
+
+const fragmentShader = `
+precision highp float;
+
+uniform sampler2D uImage;
+
+uniform vec2 uImageSize;
+uniform vec2 uResolution;
+
+uniform float uTile;
+uniform float uDashWidth;
+uniform float uConnection;
+uniform float uOblique;
+uniform float uLineAngle;
+
+uniform float uPower;
+uniform float uMinimumTone;
+uniform float uContrast;
+
+uniform vec2 uPointer;
+uniform vec2 uPointerVelocity;
+
+uniform float uHoverStrength;
+uniform float uLightIntensity;
+uniform float uLightRadius;
+uniform float uVerticalFade;
+
+uniform vec3 uColor;
+
+varying vec2 vUv;
+
+
+vec2 rotate2d(
+  vec2 p,
+  float a
+) {
+  float c = cos(a);
+  float s = sin(a);
+
+  return mat2(
+    c, -s,
+    s, c
+  ) * p;
+}
+
+
+vec2 getImageUv(
+  vec2 screenUv
+) {
+
+  float imageAspect =
+    uImageSize.x /
+    max(uImageSize.y, 1.0);
+
+  float viewAspect =
+    uResolution.x /
+    max(uResolution.y, 1.0);
+
+  vec2 uv =
+    screenUv;
+
+
+  if (
+    viewAspect >
+    imageAspect
+  ) {
+
+    float displayedWidth =
+      imageAspect /
+      viewAspect;
+
+    uv.x =
+      (screenUv.x - .5) /
+      displayedWidth +
+      .5;
+
+  }
+
+  else {
+
+    float displayedHeight =
+      viewAspect /
+      imageAspect;
+
+    uv.y =
+      (screenUv.y - .5) /
+      displayedHeight +
+      .5;
+
+  }
+
+
+  return uv;
+}
+
+
+float inImage(
+  vec2 uv
+) {
+  return
+    step(0.0, uv.x) *
+    step(uv.x, 1.0) *
+    step(0.0, uv.y) *
+    step(uv.y, 1.0);
+}
+
+
+vec3 sampleImage(
+  vec2 screenUv
+) {
+
+  vec2 uv =
+    getImageUv(
+      screenUv
+    );
+
+
+  vec3 c =
+    texture2D(
+      uImage,
+      clamp(
+        uv,
+        0.0,
+        1.0
+      )
+    ).rgb;
+
+
+  return clamp(
+    (c - .5) *
+    uContrast +
+    .5,
+    0.0,
+    1.0
+  );
+}
+
+
+float sdBox(
+  vec2 p,
+  vec2 b
+) {
+
+  vec2 d =
+    abs(p) -
+    b;
+
+
+  return
+    length(
+      max(
+        d,
+        0.0
+      )
+    ) +
+    min(
+      max(
+        d.x,
+        d.y
+      ),
+      0.0
+    );
+}
+
+
+float stripeDistance(
+  vec2 cellUv,
+  float radius,
+  float thickness
+) {
+
+  vec2 p =
+    cellUv -
+    .5;
+
+
+  float halfThickness =
+    max(
+      thickness *
+      radius,
+      .001
+    );
+
+
+  float skew =
+    uOblique;
+
+
+  float shearOffset =
+    abs(skew) *
+    halfThickness;
+
+
+  float connectionGate =
+    smoothstep(
+      .40,
+      .50,
+      radius
+    );
+
+
+  float visualHalfLength =
+    radius +
+    shearOffset *
+    connectionGate;
+
+
+  p.x -=
+    p.y *
+    skew;
+
+
+  return sdBox(
+    p,
+    vec2(
+      visualHalfLength,
+      halfThickness
+    )
+  );
+}
+
+
+void main() {
+
+  vec2 fragCoord =
+    vUv *
+    uResolution;
+
+
+  float cellSize =
+    max(
+      uTile,
+      1.0
+    );
+
+
+  /* POINTER */
+
+  vec2 pointerPx =
+    uPointer *
+    uResolution;
+
+
+  vec2 delta =
+    fragCoord -
+    pointerPx;
+
+
+  float distancePx =
+    length(
+      delta
+    );
+
+
+  vec2 radialDirection =
+    distancePx > .001
+
+    ?
+
+    delta /
+    distancePx
+
+    :
+
+    vec2(
+      0.0,
+      1.0
+    );
+
+
+  float velocityMagnitude =
+    length(
+      uPointerVelocity
+    );
+
+
+  vec2 motionDirection =
+    velocityMagnitude > .001
+
+    ?
+
+    uPointerVelocity /
+    velocityMagnitude
+
+    :
+
+    vec2(0.0);
+
+
+  float motionBias =
+    velocityMagnitude > .001
+
+    ?
+
+    dot(
+      -radialDirection,
+      motionDirection
+    ) * .5 + .5
+
+    :
+
+    .5;
+
+
+  float cursorRadius =
+    uLightRadius *
+    uResolution.y;
+
+
+  float cursorMask =
+    smoothstep(
+      cursorRadius,
+      0.0,
+      distancePx
+    );
+
+
+  float fadeRange =
+    max(
+      uVerticalFade,
+      .0001
+    );
+
+
+  cursorMask *=
+    smoothstep(
+      0.0,
+      fadeRange,
+      vUv.y
+    )
+
+    *
+
+    smoothstep(
+      0.0,
+      fadeRange,
+      1.0 - vUv.y
+    );
+
+
+  cursorMask *=
+    uHoverStrength;
+
+
+  /* GLOBAL GRID */
+
+  vec2 gridCenter =
+    uResolution *
+    .5;
+
+
+  vec2 gridCoord =
+    rotate2d(
+      fragCoord -
+      gridCenter,
+      -uLineAngle
+    ) +
+    gridCenter;
+
+
+  vec2 cellIndex =
+    floor(
+      gridCoord /
+      cellSize
+    );
+
+
+  vec2 cellUv =
+    fract(
+      gridCoord /
+      cellSize
+    );
+
+
+  vec2 gridSampleCoord =
+    (
+      cellIndex +
+      .5
+    ) *
+    cellSize;
+
+
+  vec2 screenSampleCoord =
+    rotate2d(
+      gridSampleCoord -
+      gridCenter,
+      uLineAngle
+    ) +
+    gridCenter;
+
+
+  vec2 sampleScreenUv =
+    screenSampleCoord /
+    uResolution;
+
+
+  vec2 sampleImageUv =
+    getImageUv(
+      sampleScreenUv
+    );
+
+
+  if (
+    inImage(
+      sampleImageUv
+    ) < .5
+  ) {
+
+    gl_FragColor =
+      vec4(0.0);
+
+    return;
+
+  }
+
+
+  vec3 imageColor =
+    sampleImage(
+      sampleScreenUv
+    );
+
+
+  float luminance =
+    dot(
+      imageColor,
+      vec3(
+        .2126,
+        .7152,
+        .0722
+      )
+    );
+
+
+  float tone =
+    1.0 -
+    luminance;
+
+
+  tone +=
+    uPower *
+    .23570226;
+
+
+  float lightLift =
+    uLightIntensity *
+    cursorMask *
+    mix(
+      .78,
+      1.18,
+      motionBias
+    ) *
+    .22;
+
+
+  tone +=
+    lightLift;
+
+
+  tone =
+    max(
+      tone,
+      uMinimumTone
+    );
+
+
+  tone =
+    clamp(
+      tone,
+      0.0,
+      1.0
+    );
+
+
+  /*
+    CONNECTION LOGIC
+    UNCHANGED.
+  */
+
+  float radius =
+    tone *
+    .93 *
+    uConnection;
+
+
+  if (
+    radius <=
+    .0001
+  ) {
+
+    gl_FragColor =
+      vec4(0.0);
+
+    return;
+
+  }
+
+
+  float d =
+    stripeDistance(
+      cellUv,
+      radius,
+      uDashWidth
+    );
+
+
+  float alpha =
+    1.0 -
+    smoothstep(
+      0.0,
+      .02,
+      d
+    );
+
+
+  gl_FragColor =
+    vec4(
+      uColor,
+      alpha
+    );
+
+}
+`;
+
+
+/* ============================================================
+   MATERIAL
+============================================================= */
+
+const material =
+  new THREE.ShaderMaterial({
+
+    uniforms,
+
+    vertexShader,
+
+    fragmentShader,
+
+    transparent: true,
+
+    depthTest: false,
+
+    depthWrite: false
+
+  });
+
+
+scene.add(
+  new THREE.Mesh(
+    geometry,
+    material
+  )
+);
+
+
+/* ============================================================
+   RESIZE
+============================================================= */
+
+function resize() {
+
+  /*
+    Preview always renders internally at true Full HD.
+    CSS scales the 1920×1080 canvas to fit the page,
+    so preview and exported files use identical geometry.
+  */
+
+  virtualWidth =
+    C.virtualWidth;
+
+  virtualHeight =
+    C.virtualHeight;
+
+
+  renderer.setSize(
+    virtualWidth,
+    virtualHeight,
+    false
+  );
+
+
+  renderer.domElement.style.width =
+    "100%";
+
+  renderer.domElement.style.height =
+    "100%";
+
+
+  uniforms
+    .uResolution
+    .value
+    .set(
+      virtualWidth,
+      virtualHeight
+    );
+
+
+  uniforms.uTile.value =
+    C.scale *
+    FULL_HD_PATTERN_SCALE;
+
+}
+
+
+new ResizeObserver(
+  resize
+).observe(
+  root
+);
+
+
+/* ============================================================
+   IMAGE
+============================================================= */
+
+function loadImage(
+  source
+) {
+
+  currentImageSource =
+    source;
+
+
+  const image =
+    new Image();
+
+
+  if (
+    /^https?:/i.test(
+      source
+    )
+  ) {
+
+    image.crossOrigin =
+      "anonymous";
+
+  }
+
+
+  image.onload =
+    () => {
+
+      currentImageElement =
+        image;
+
+
+      uniforms
+        .uImageSize
+        .value
+        .set(
+          image.naturalWidth,
+          image.naturalHeight
+        );
+
+
+      if (texture) {
+        texture.dispose();
+      }
+
+
+      texture =
+        new THREE.Texture(
+          image
+        );
+
+
+      texture.wrapS =
+        THREE.ClampToEdgeWrapping;
+
+      texture.wrapT =
+        THREE.ClampToEdgeWrapping;
+
+      texture.generateMipmaps =
+        false;
+
+      texture.minFilter =
+        THREE.LinearFilter;
+
+      texture.magFilter =
+        THREE.LinearFilter;
+
+      texture.encoding =
+        THREE.sRGBEncoding;
+
+      texture.needsUpdate =
+        true;
+
+
+      uniforms.uImage.value =
+        texture;
+
+    };
+
+
+  image.onerror =
+    error => {
+
+      console.error(
+        "Image failed:",
+        error
+      );
+
+    };
+
+
+  image.src =
+    source;
+
+}
+
+
+/* ============================================================
+   POINTER
+============================================================= */
+
+function pointerMove(
+  event
+) {
+
+  if (
+    C.exclude &&
+    event.target instanceof Element &&
+    event.target.closest(
+      C.exclude
+    )
+  ) {
+
+    pointer.inside =
+      false;
+
+    return;
+
+  }
+
+
+  const rect =
+    root.getBoundingClientRect();
+
+
+  const inside =
+    event.clientX >= rect.left &&
+    event.clientX <= rect.right &&
+    event.clientY >= rect.top &&
+    event.clientY <= rect.bottom;
+
+
+  if (!inside) {
+
+    pointer.inside =
+      false;
+
+    return;
+
+  }
+
+
+  const entered =
+    !pointer.inside;
+
+
+  const x =
+    THREE.MathUtils.clamp(
+      (
+        event.clientX -
+        rect.left
+      ) /
+      Math.max(
+        rect.width,
+        1
+      ),
+      0,
+      1
+    );
+
+
+  const y =
+    THREE.MathUtils.clamp(
+      (
+        event.clientY -
+        rect.top
+      ) /
+      Math.max(
+        rect.height,
+        1
+      ),
+      0,
+      1
+    );
+
+
+  const dx =
+    x -
+    pointer.mouseX;
+
+
+  const dy =
+    y -
+    pointer.mouseY;
+
+
+  pointer.mouseX =
+    x;
+
+  pointer.mouseY =
+    y;
+
+  pointer.inside =
+    true;
+
+
+  if (entered) {
+
+    pointer.smoothX =
+      x;
+
+    pointer.smoothY =
+      y;
+
+    pointer.velocityX =
+      0;
+
+    pointer.velocityY =
+      0;
+
+    return;
+
+  }
+
+
+  pointer.velocityX =
+    dx;
+
+  pointer.velocityY =
+    dy;
+
+}
+
+
+function pointerLeave() {
+
+  pointer.inside =
+    false;
+
+}
+
+
+window.addEventListener(
+  "pointermove",
+  pointerMove,
+  {
+    passive: true
+  }
+);
+
+
+document.addEventListener(
+  "mouseleave",
+  pointerLeave
+);
+
+
+window.addEventListener(
+  "blur",
+  pointerLeave
+);
+
+
+/* ============================================================
+   UI
+============================================================= */
+
+function bindSlider(
+  id,
+  callback,
+  formatter
+) {
+
+  const input =
+    document.getElementById(
+      id
+    );
+
+
+  const output =
+    input.parentElement.querySelector(
+      "output"
+    );
+
+
+  function update() {
+
+    const value =
+      Number(
+        input.value
+      );
+
+
+    callback(
+      value
+    );
+
+
+    output.textContent =
+      formatter
+      ? formatter(value)
+      : value;
+
+  }
+
+
+  input.addEventListener(
+    "input",
+    update
+  );
+
+
+  return {
+    input,
+    update
+  };
+
+}
+
+
+const angleControl =
+  bindSlider(
+    "tw-angle",
+
+    value => {
+
+      C.lineAngle =
+        value;
+
+
+      uniforms
+        .uLineAngle
+        .value =
+        THREE.MathUtils.degToRad(
+          value
+        );
+
+    },
+
+    value =>
+      `${Math.round(value)}°`
+  );
+
+
+document
+  .querySelectorAll(
+    "[data-angle]"
+  )
+  .forEach(
+    button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          angleControl.input.value =
+            button.dataset.angle;
+
+          angleControl.update();
+
+        }
+      );
+
+    }
+  );
+
+
+const scaleControl =
+  bindSlider(
+    "tw-scale",
+    value => {
+
+      C.scale =
+        value;
+
+      uniforms.uTile.value =
+        value *
+        FULL_HD_PATTERN_SCALE;
+
+    }
+  );
+
+
+const widthControl =
+  bindSlider(
+    "tw-width",
+    value => {
+
+      C.width =
+        value;
+
+      uniforms.uDashWidth.value =
+        value;
+
+    },
+    value =>
+      value.toFixed(2)
+  );
+
+
+const connectionControl =
+  bindSlider(
+    "tw-connection",
+    value => {
+
+      C.connection =
+        value;
+
+      uniforms.uConnection.value =
+        value;
+
+    },
+    value =>
+      value.toFixed(2)
+  );
+
+
+const obliqueControl =
+  bindSlider(
+    "tw-oblique",
+    value => {
+
+      C.oblique =
+        value;
+
+      uniforms.uOblique.value =
+        value;
+
+    },
+    value =>
+      value.toFixed(2)
+  );
+
+
+const contrastControl =
+  bindSlider(
+    "tw-contrast",
+    value => {
+
+      C.contrast =
+        value;
+
+      uniforms.uContrast.value =
+        value;
+
+    },
+    value =>
+      value.toFixed(2)
+  );
+
+
+const powerControl =
+  bindSlider(
+    "tw-power",
+    value => {
+
+      C.power =
+        value;
+
+      uniforms.uPower.value =
+        value;
+
+    },
+    value =>
+      value.toFixed(2)
+  );
+
+
+const minimumToneControl =
+  bindSlider(
+    "tw-minimum-tone",
+    value => {
+
+      C.minimumTone =
+        value;
+
+      uniforms.uMinimumTone.value =
+        value;
+
+    },
+    value =>
+      value.toFixed(2)
+  );
+
+
+const intensityControl =
+  bindSlider(
+    "tw-light-intensity",
+    value => {
+
+      C.lightIntensity =
+        value;
+
+      uniforms.uLightIntensity.value =
+        value;
+
+    },
+    value =>
+      value.toFixed(2)
+  );
+
+
+const radiusControl =
+  bindSlider(
+    "tw-light-radius",
+    value => {
+
+      C.lightRadius =
+        value;
+
+      uniforms.uLightRadius.value =
+        value;
+
+    },
+    value =>
+      value.toFixed(2)
+  );
+
+
+const followControl =
+  bindSlider(
+    "tw-follow",
+    value => {
+
+      C.follow =
+        value;
+
+    },
+    value =>
+      value.toFixed(2)
+  );
+
+
+/* ============================================================
+   COLORS
+============================================================= */
+
+const lineColor =
+  document.getElementById(
+    "tw-line-color"
+  );
+
+
+lineColor.addEventListener(
+  "input",
+  () => {
+
+    C.color =
+      lineColor.value;
+
+
+    uniforms
+      .uColor
+      .value
+      .set(
+        C.color
+      );
+
+  }
+);
+
+
+const backgroundColor =
+  document.getElementById(
+    "tw-bg-color"
+  );
+
+
+backgroundColor.addEventListener(
+  "input",
+  () => {
+
+    C.background =
+      backgroundColor.value;
+
+
+    root.style.background =
+      C.background;
+
+  }
+);
+
+
+/* ============================================================
+   UPLOAD
+============================================================= */
+
+uploadButton.addEventListener(
+  "click",
+  () => {
+
+    upload.click();
+
+  }
+);
+
+
+upload.addEventListener(
+  "change",
+  event => {
+
+    const file =
+      event.target.files?.[0];
+
+
+    if (!file) return;
+
+
+    const reader =
+      new FileReader();
+
+
+    reader.onload =
+      () => {
+
+        loadImage(
+          String(
+            reader.result
+          )
+        );
+
+      };
+
+
+    reader.readAsDataURL(
+      file
+    );
+
+  }
+);
+
+
+/* ============================================================
+   JPG
+============================================================= */
+
+downloadButton.addEventListener(
+  "click",
+  () => {
+
+    renderer.render(
+      scene,
+      camera
+    );
+
+
+    const exportCanvas =
+      document.createElement(
+        "canvas"
+      );
+
+
+    exportCanvas.width =
+      renderer.domElement.width;
+
+    exportCanvas.height =
+      renderer.domElement.height;
+
+
+    const ctx =
+      exportCanvas.getContext(
+        "2d"
+      );
+
+
+    ctx.fillStyle =
+      C.background;
+
+
+    ctx.fillRect(
+      0,
+      0,
+      exportCanvas.width,
+      exportCanvas.height
+    );
+
+
+    ctx.drawImage(
+      renderer.domElement,
+      0,
+      0
+    );
+
+
+    exportCanvas.toBlob(
+      blob => {
+
+        if (!blob) return;
+
+
+        downloadBlob(
+          blob,
+          "halftone-1920x1080.jpg"
+        );
+
+      },
+
+      "image/jpeg",
+      .95
+
+    );
+
+  }
+);
+
+
+/* ============================================================
+   TRUE VECTOR SVG
+============================================================= */
+
+svgButton.addEventListener(
+  "click",
+  async () => {
+
+    const original =
+      svgButton.textContent;
+
+
+    svgButton.disabled =
+      true;
+
+
+    svgButton.textContent =
+      "Building vectors…";
+
+
+    svgStatus.textContent =
+      "";
+
+
+    try {
+
+      await waitFrame();
+
+
+      const result =
+        buildTrueVectorSvg();
+
+
+      if (
+        !result ||
+        result.count <= 0
+      ) {
+
+        throw new Error(
+          "0 polygons generated."
+        );
+
+      }
+
+
+      svgStatus.textContent =
+        `${result.count} editable polygons`;
+
+
+      const xml =
+        new XMLSerializer()
+          .serializeToString(
+            result.svg
+          );
+
+
+      const output =
+        `<?xml version="1.0" encoding="UTF-8"?>\n${xml}`;
+
+
+      const blob =
+        new Blob(
+          [output],
+          {
+            type:
+              "image/svg+xml;charset=utf-8"
+          }
+        );
+
+
+      downloadBlob(
+        blob,
+        "halftone-vector-1920x1080.svg"
+      );
+
+
+      svgButton.textContent =
+        "Downloaded SVG";
+
+
+      setTimeout(
+        () => {
+
+          svgButton.textContent =
+            original;
+
+        },
+        1600
+      );
+
+    }
+
+    catch (error) {
+
+      console.error(
+        "SVG ERROR:",
+        error
+      );
+
+
+      svgButton.textContent =
+        "SVG failed";
+
+
+      svgStatus.textContent =
+        error.message;
+
+
+      alert(
+        `SVG export failed:\n${error.message}`
+      );
+
+
+      setTimeout(
+        () => {
+
+          svgButton.textContent =
+            original;
+
+        },
+        2200
+      );
+
+    }
+
+    finally {
+
+      svgButton.disabled =
+        false;
+
+    }
+
+  }
+);
+
+
+/* ============================================================
+   BUILD SVG
+
+   IMPORTANT:
+
+   CPU export uses normal browser coordinates:
+   x = left → right
+   y = top → bottom
+
+   We reproduce the visible shader result in that
+   coordinate system and generate ACTUAL polygons.
+============================================================= */
+
+function buildTrueVectorSvg() {
+
+  if (
+    !currentImageElement ||
+    !currentImageElement.complete ||
+    !currentImageElement.naturalWidth
+  ) {
+
+    throw new Error(
+      "Image is not ready."
+    );
+
+  }
+
+
+  const SVG_NS =
+    "http://www.w3.org/2000/svg";
+
+
+  const width =
+    Math.max(
+      1,
+      Math.round(
+        virtualWidth
+      )
+    );
+
+
+  const height =
+    Math.max(
+      1,
+      Math.round(
+        virtualHeight
+      )
+    );
+
+
+  const cellSize =
+    Math.max(
+      1,
+      C.scale *
+      FULL_HD_PATTERN_SCALE
+    );
+
+
+  /* ========================================================
+     READ SOURCE IMAGE PIXELS
+  ======================================================== */
+
+  const sourceCanvas =
+    document.createElement(
+      "canvas"
+    );
+
+
+  /*
+    We don't need gigantic image data.
+    2048 px on the longest dimension is enough
+    because the halftone samples once per cell.
+  */
+
+  const naturalW =
+    currentImageElement.naturalWidth;
+
+
+  const naturalH =
+    currentImageElement.naturalHeight;
+
+
+  const maxSampleDimension =
+    2048;
+
+
+  const sampleScale =
+    Math.min(
+      1,
+      maxSampleDimension /
+      Math.max(
+        naturalW,
+        naturalH
+      )
+    );
+
+
+  sourceCanvas.width =
+    Math.max(
+      1,
+      Math.round(
+        naturalW *
+        sampleScale
+      )
+    );
+
+
+  sourceCanvas.height =
+    Math.max(
+      1,
+      Math.round(
+        naturalH *
+        sampleScale
+      )
+    );
+
+
+  const sourceCtx =
+    sourceCanvas.getContext(
+      "2d",
+      {
+        willReadFrequently: true
+      }
+    );
+
+
+  if (!sourceCtx) {
+
+    throw new Error(
+      "Could not create image sampling canvas."
+    );
+
+  }
+
+
+  sourceCtx.drawImage(
+    currentImageElement,
+    0,
+    0,
+    sourceCanvas.width,
+    sourceCanvas.height
+  );
+
+
+  let imageData;
+
+
+  try {
+
+    imageData =
+      sourceCtx.getImageData(
+        0,
+        0,
+        sourceCanvas.width,
+        sourceCanvas.height
+      );
+
+  }
+
+  catch (error) {
+
+    throw new Error(
+      "Browser blocked image pixel access. Upload the image locally, then export SVG."
+    );
+
+  }
+
+
+  /* ========================================================
+     IMAGE CONTAIN RECTANGLE
+
+     Same visual layout as shader's getImageUv().
+  ======================================================== */
+
+  const imageAspect =
+    naturalW /
+    naturalH;
+
+
+  const viewAspect =
+    width /
+    height;
+
+
+  let displayWidth;
+  let displayHeight;
+
+
+  if (
+    viewAspect >
+    imageAspect
+  ) {
+
+    displayHeight =
+      height;
+
+    displayWidth =
+      height *
+      imageAspect;
+
+  }
+
+  else {
+
+    displayWidth =
+      width;
+
+    displayHeight =
+      width /
+      imageAspect;
+
+  }
+
+
+  const imageLeft =
+    (
+      width -
+      displayWidth
+    ) * .5;
+
+
+  const imageTop =
+    (
+      height -
+      displayHeight
+    ) * .5;
+
+
+  /* ========================================================
+     SVG DOCUMENT
+  ======================================================== */
+
+  const svg =
+    document.createElementNS(
+      SVG_NS,
+      "svg"
+    );
+
+
+  svg.setAttribute(
+    "xmlns",
+    SVG_NS
+  );
+
+
+  svg.setAttribute(
+    "width",
+    width
+  );
+
+
+  svg.setAttribute(
+    "height",
+    height
+  );
+
+
+  svg.setAttribute(
+    "viewBox",
+    `0 0 ${width} ${height}`
+  );
+
+
+  /*
+    Editable background.
+  */
+
+  const background =
+    document.createElementNS(
+      SVG_NS,
+      "rect"
+    );
+
+
+  background.setAttribute(
+    "id",
+    "background"
+  );
+
+
+  background.setAttribute(
+    "x",
+    "0"
+  );
+
+
+  background.setAttribute(
+    "y",
+    "0"
+  );
+
+
+  background.setAttribute(
+    "width",
+    width
+  );
+
+
+  background.setAttribute(
+    "height",
+    height
+  );
+
+
+  background.setAttribute(
+    "fill",
+    C.background
+  );
+
+
+  svg.appendChild(
+    background
+  );
+
+
+  const group =
+    document.createElementNS(
+      SVG_NS,
+      "g"
+    );
+
+
+  group.setAttribute(
+    "id",
+    "halftone-lines"
+  );
+
+
+  svg.appendChild(
+    group
+  );
+
+
+  /* ========================================================
+     GRID RANGE
+  ======================================================== */
+
+  const angle =
+    THREE.MathUtils.degToRad(
+      C.lineAngle
+    );
+
+
+  const centerX =
+    width * .5;
+
+
+  const centerY =
+    height * .5;
+
+
+  /*
+    Rotate viewport corners backwards into
+    the unrotated grid coordinate system.
+  */
+
+  const corners = [
+
+    inverseRotateScreen(
+      0,
+      0,
+      centerX,
+      centerY,
+      angle
+    ),
+
+    inverseRotateScreen(
+      width,
+      0,
+      centerX,
+      centerY,
+      angle
+    ),
+
+    inverseRotateScreen(
+      width,
+      height,
+      centerX,
+      centerY,
+      angle
+    ),
+
+    inverseRotateScreen(
+      0,
+      height,
+      centerX,
+      centerY,
+      angle
+    )
+
+  ];
+
+
+  let minGX =
+    Infinity;
+
+  let minGY =
+    Infinity;
+
+  let maxGX =
+    -Infinity;
+
+  let maxGY =
+    -Infinity;
+
+
+  for (
+    const p of corners
+  ) {
+
+    minGX =
+      Math.min(
+        minGX,
+        p.x
+      );
+
+
+    minGY =
+      Math.min(
+        minGY,
+        p.y
+      );
+
+
+    maxGX =
+      Math.max(
+        maxGX,
+        p.x
+      );
+
+
+    maxGY =
+      Math.max(
+        maxGY,
+        p.y
+      );
+
+  }
+
+
+  const startX =
+    Math.floor(
+      minGX /
+      cellSize
+    ) - 2;
+
+
+  const endX =
+    Math.ceil(
+      maxGX /
+      cellSize
+    ) + 2;
+
+
+  const startY =
+    Math.floor(
+      minGY /
+      cellSize
+    ) - 2;
+
+
+  const endY =
+    Math.ceil(
+      maxGY /
+      cellSize
+    ) + 2;
+
+
+  /* ========================================================
+     CURSOR SNAPSHOT
+
+     Convert current browser pointer into shader-style Y-up
+     coordinates for the tone calculations.
+  ======================================================== */
+
+  const pointerShaderX =
+    pointer.smoothX *
+    width;
+
+
+  const pointerShaderY =
+    (
+      1 -
+      pointer.smoothY
+    ) *
+    height;
+
+
+  const velocityShaderX =
+    pointer.velocityX *
+    width;
+
+
+  const velocityShaderY =
+    -pointer.velocityY *
+    height;
+
+
+  const velocityMagnitude =
+    Math.hypot(
+      velocityShaderX,
+      velocityShaderY
+    );
+
+
+  const motionX =
+    velocityMagnitude > .001
+
+    ?
+
+    velocityShaderX /
+    velocityMagnitude
+
+    :
+
+    0;
+
+
+  const motionY =
+    velocityMagnitude > .001
+
+    ?
+
+    velocityShaderY /
+    velocityMagnitude
+
+    :
+
+    0;
+
+
+  /* ========================================================
+     GENERATE
+  ======================================================== */
+
+  let count =
+    0;
+
+
+  for (
+    let cellY = startY;
+    cellY <= endY;
+    cellY++
+  ) {
+
+
+    for (
+      let cellX = startX;
+      cellX <= endX;
+      cellX++
+    ) {
+
+
+      /*
+        Cell center in unrotated SCREEN grid coordinates.
+      */
+
+      const gridCX =
+        (
+          cellX +
+          .5
+        ) *
+        cellSize;
+
+
+      const gridCY =
+        (
+          cellY +
+          .5
+        ) *
+        cellSize;
+
+
+      /*
+        Rotate grid into visible screen coordinates.
+      */
+
+      const screen =
+        rotateScreen(
+          gridCX,
+          gridCY,
+          centerX,
+          centerY,
+          angle
+        );
+
+
+      /*
+        Outside viewport:
+        no need to sample it.
+      */
+
+      if (
+        screen.x <
+          -cellSize * 2 ||
+
+        screen.x >
+          width +
+          cellSize * 2 ||
+
+        screen.y <
+          -cellSize * 2 ||
+
+        screen.y >
+          height +
+          cellSize * 2
+      ) {
+
+        continue;
+
+      }
+
+
+      /*
+        Outside contained source image.
+      */
+
+      if (
+        screen.x <
+          imageLeft ||
+
+        screen.x >
+          imageLeft +
+          displayWidth ||
+
+        screen.y <
+          imageTop ||
+
+        screen.y >
+          imageTop +
+          displayHeight
+      ) {
+
+        continue;
+
+      }
+
+
+      /*
+        Source image normalized UV.
+
+        Browser/Image UV:
+        top-left origin.
+
+        This gives the visually correct upright
+        source image.
+      */
+
+      const imageU =
+        (
+          screen.x -
+          imageLeft
+        ) /
+        displayWidth;
+
+
+      const imageV =
+        (
+          screen.y -
+          imageTop
+        ) /
+        displayHeight;
+
+
+      const sampled =
+        sampleImagePixel(
+          imageData,
+          imageU,
+          imageV
+        );
+
+
+      /*
+        Contrast.
+      */
+
+      const r =
+        clamp01(
+          (
+            sampled.r -
+            .5
+          ) *
+          C.contrast +
+          .5
+        );
+
+
+      const g =
+        clamp01(
+          (
+            sampled.g -
+            .5
+          ) *
+          C.contrast +
+          .5
+        );
+
+
+      const b =
+        clamp01(
+          (
+            sampled.b -
+            .5
+          ) *
+          C.contrast +
+          .5
+        );
+
+
+      const luminance =
+        r * .2126 +
+        g * .7152 +
+        b * .0722;
+
+
+      let tone =
+        1 -
+        luminance;
+
+
+      /*
+        Same power formula.
+      */
+
+      tone +=
+        C.power *
+        .23570226;
+
+
+      /* ====================================================
+         CURRENT CURSOR EFFECT
+      ==================================================== */
+
+      const screenShaderX =
+        screen.x;
+
+
+      const screenShaderY =
+        height -
+        screen.y;
+
+
+      const dx =
+        screenShaderX -
+        pointerShaderX;
+
+
+      const dy =
+        screenShaderY -
+        pointerShaderY;
+
+
+      const distance =
+        Math.hypot(
+          dx,
+          dy
+        );
+
+
+      const cursorRadius =
+        C.lightRadius *
+        height;
+
+
+      let cursorMask =
+        1 -
+        smoothstepJS(
+          0,
+          cursorRadius,
+          distance
+        );
+
+
+      const shaderY =
+        screenShaderY /
+        height;
+
+
+      const fadeRange =
+        Math.max(
+          C.lightVerticalFade,
+          .0001
+        );
+
+
+      cursorMask *=
+
+        smoothstepJS(
+          0,
+          fadeRange,
+          shaderY
+        )
+
+        *
+
+        smoothstepJS(
+          0,
+          fadeRange,
+          1 -
+          shaderY
+        );
+
+
+      cursorMask *=
+        pointer.hover;
+
+
+      let motionBias =
+        .5;
+
+
+      if (
+        velocityMagnitude >
+          .001 &&
+        distance >
+          .001
+      ) {
+
+        const radialX =
+          dx /
+          distance;
+
+
+        const radialY =
+          dy /
+          distance;
+
+
+        const dot =
+          (
+            -radialX *
+            motionX
+          ) +
+          (
+            -radialY *
+            motionY
+          );
+
+
+        motionBias =
+          dot *
+          .5 +
+          .5;
+
+      }
+
+
+      tone +=
+        C.lightIntensity *
+        cursorMask *
+        mixJS(
+          .78,
+          1.18,
+          motionBias
+        ) *
+        .22;
+
+
+      tone =
+        Math.max(
+          tone,
+          C.minimumTone
+        );
+
+
+      tone =
+        clamp01(
+          tone
+        );
+
+
+      /* ====================================================
+         CONNECTION LOGIC — SAME AS WEBGL
+      ==================================================== */
+
+      const radius =
+        tone *
+        .93 *
+        C.connection;
+
+
+      if (
+        radius <=
+        .0001
+      ) {
+
+        continue;
+
+      }
+
+
+      /* ====================================================
+         PARALLELOGRAM
+      ==================================================== */
+
+      const halfThicknessCell =
+        Math.max(
+          C.width *
+          radius,
+          .001
+        );
+
+
+      const shearOffsetCell =
+        Math.abs(
+          C.oblique
+        ) *
+        halfThicknessCell;
+
+
+      const connectionGate =
+        smoothstepJS(
+          .40,
+          .50,
+          radius
+        );
+
+
+      const halfLengthCell =
+        radius +
+        shearOffsetCell *
+        connectionGate;
+
+
+      const halfLengthPx =
+        halfLengthCell *
+        cellSize;
+
+
+      const halfThicknessPx =
+        halfThicknessCell *
+        cellSize;
+
+
+      const shearPx =
+        C.oblique *
+        halfThicknessPx;
+
+
+      /*
+        Shader shape converted to normal
+        SCREEN top-down coordinates.
+
+        Positive slant:
+            ______
+           /     /
+          /_____/
+      */
+
+      const localPoints = [
+
+        {
+          x:
+            -halfLengthPx +
+            shearPx,
+
+          y:
+            -halfThicknessPx
+        },
+
+        {
+          x:
+            halfLengthPx +
+            shearPx,
+
+          y:
+            -halfThicknessPx
+        },
+
+        {
+          x:
+            halfLengthPx -
+            shearPx,
+
+          y:
+            halfThicknessPx
+        },
+
+        {
+          x:
+            -halfLengthPx -
+            shearPx,
+
+          y:
+            halfThicknessPx
+        }
+
+      ];
+
+
+      /*
+        Rotate every polygon point by global
+        grid angle.
+      */
+
+      const points =
+        localPoints.map(
+          p => {
+
+            const result =
+              rotateScreen(
+                gridCX + p.x,
+                gridCY + p.y,
+                centerX,
+                centerY,
+                angle
+              );
+
+
+            return `${roundSVG(result.x)},${roundSVG(result.y)}`;
+
+          }
+        );
+
+
+      /*
+        Ignore fully-offscreen shapes.
+      */
+
+      if (
+        !polygonInViewport(
+          points,
+          width,
+          height
+        )
+      ) {
+
+        continue;
+
+      }
+
+
+      /*
+        REAL SVG POLYGON.
+
+        Fill is applied DIRECTLY to each polygon.
+        This improves compatibility with Figma,
+        Illustrator, Affinity, etc.
+      */
+
+      const polygon =
+        document.createElementNS(
+          SVG_NS,
+          "polygon"
+        );
+
+
+      polygon.setAttribute(
+        "id",
+        `halftone-${count}`
+      );
+
+
+      polygon.setAttribute(
+        "points",
+        points.join(" ")
+      );
+
+
+      polygon.setAttribute(
+        "fill",
+        C.color
+      );
+
+
+      group.appendChild(
+        polygon
+      );
+
+
+      count++;
+
+    }
+
+  }
+
+
+  if (
+    count === 0
+  ) {
+
+    throw new Error(
+      "0 polygons generated. The SVG was NOT downloaded."
+    );
+
+  }
+
+
+  return {
+    svg,
+    count
+  };
+
+}
+
+
+/* ============================================================
+   VECTOR HELPERS
+============================================================= */
+
+function sampleImagePixel(
+  imageData,
+  u,
+  v
+) {
+
+  const x =
+    Math.max(
+      0,
+      Math.min(
+        imageData.width - 1,
+        Math.floor(
+          u *
+          imageData.width
+        )
+      )
+    );
+
+
+  const y =
+    Math.max(
+      0,
+      Math.min(
+        imageData.height - 1,
+        Math.floor(
+          v *
+          imageData.height
+        )
+      )
+    );
+
+
+  const index =
+    (
+      y *
+      imageData.width +
+      x
+    ) * 4;
+
+
+  return {
+    r:
+      imageData.data[index] /
+      255,
+
+    g:
+      imageData.data[index + 1] /
+      255,
+
+    b:
+      imageData.data[index + 2] /
+      255
+  };
+
+}
+
+
+function rotateScreen(
+  x,
+  y,
+  cx,
+  cy,
+  angle
+) {
+
+  const cos =
+    Math.cos(
+      angle
+    );
+
+
+  const sin =
+    Math.sin(
+      angle
+    );
+
+
+  const dx =
+    x -
+    cx;
+
+
+  const dy =
+    y -
+    cy;
+
+
+  return {
+    x:
+      cx +
+      dx * cos -
+      dy * sin,
+
+    y:
+      cy +
+      dx * sin +
+      dy * cos
+  };
+
+}
+
+
+function inverseRotateScreen(
+  x,
+  y,
+  cx,
+  cy,
+  angle
+) {
+
+  return rotateScreen(
+    x,
+    y,
+    cx,
+    cy,
+    -angle
+  );
+
+}
+
+
+function polygonInViewport(
+  pointStrings,
+  width,
+  height
+) {
+
+  let minX =
+    Infinity;
+
+  let minY =
+    Infinity;
+
+  let maxX =
+    -Infinity;
+
+  let maxY =
+    -Infinity;
+
+
+  for (
+    const value of
+      pointStrings
+  ) {
+
+    const parts =
+      value.split(",");
+
+
+    const x =
+      Number(
+        parts[0]
+      );
+
+
+    const y =
+      Number(
+        parts[1]
+      );
+
+
+    minX =
+      Math.min(
+        minX,
+        x
+      );
+
+
+    minY =
+      Math.min(
+        minY,
+        y
+      );
+
+
+    maxX =
+      Math.max(
+        maxX,
+        x
+      );
+
+
+    maxY =
+      Math.max(
+        maxY,
+        y
+      );
+
+  }
+
+
+  return !(
+    maxX < 0 ||
+    maxY < 0 ||
+    minX > width ||
+    minY > height
+  );
+
+}
+
+
+function clamp01(
+  value
+) {
+
+  return Math.max(
+    0,
+    Math.min(
+      1,
+      value
+    )
+  );
+
+}
+
+
+function mixJS(
+  a,
+  b,
+  t
+) {
+
+  return a +
+    (
+      b -
+      a
+    ) *
+    t;
+
+}
+
+
+function smoothstepJS(
+  edge0,
+  edge1,
+  x
+) {
+
+  if (
+    edge0 ===
+    edge1
+  ) {
+
+    return x <
+      edge0
+
+      ?
+
+      0
+
+      :
+
+      1;
+
+  }
+
+
+  const t =
+    clamp01(
+      (
+        x -
+        edge0
+      ) /
+      (
+        edge1 -
+        edge0
+      )
+    );
+
+
+  return t *
+    t *
+    (
+      3 -
+      2 * t
+    );
+
+}
+
+
+function roundSVG(
+  value
+) {
+
+  return (
+    Math.round(
+      value *
+      1000
+    ) /
+    1000
+  );
+}
+
+
+/* ============================================================
+   DOWNLOAD HELPER
+============================================================= */
+
+function downloadBlob(
+  blob,
+  filename
+) {
+
+  const url =
+    URL.createObjectURL(
+      blob
+    );
+
+
+  const link =
+    document.createElement(
+      "a"
+    );
+
+
+  link.href =
+    url;
+
+
+  link.download =
+    filename;
+
+
+  link.style.display =
+    "none";
+
+
+  document.body.appendChild(
+    link
+  );
+
+
+  link.click();
+
+
+  /*
+    Do NOT kill the URL immediately.
+  */
+
+  setTimeout(
+    () => {
+
+      link.remove();
+
+      URL.revokeObjectURL(
+        url
+      );
+
+    },
+    3000
+  );
+
+}
+
+
+function waitFrame() {
+
+  return new Promise(
+    resolve => {
+
+      requestAnimationFrame(
+        () => {
+          resolve();
+        }
+      );
+
+    }
+  );
+
+}
+
+
+/* ============================================================
+   COPY EMBED
+============================================================= */
+
+function buildEmbedCode() {
+
+  const uid =
+    "halftone_" +
+    Math.random()
+      .toString(36)
+      .slice(2, 9);
+
+
+  const config = {
+
+    imageUrl:
+      currentImageSource,
+
+    lineAngle:
+      C.lineAngle,
+
+    oblique:
+      C.oblique,
+
+    scale:
+      C.scale *
+      FULL_HD_PATTERN_SCALE,
+
+    width:
+      C.width,
+
+    connection:
+      C.connection,
+
+    virtualWidth:
+      C.virtualWidth,
+
+    virtualHeight:
+      C.virtualHeight,
+
+    power:
+      C.power,
+
+    minimumTone:
+      C.minimumTone,
+
+    contrast:
+      C.contrast,
+
+    color:
+      C.color,
+
+    background:
+      C.background,
+
+    lightIntensity:
+      C.lightIntensity,
+
+    lightRadius:
+      C.lightRadius,
+
+    lightVerticalFade:
+      C.lightVerticalFade,
+
+    follow:
+      C.follow,
+
+    velocityDamping:
+      C.velocityDamping,
+
+    fadeIn:
+      C.fadeIn,
+
+    fadeOut:
+      C.fadeOut
+  };
+
+
+  return `<!-- HALFTONE EMBED -->
+<div
+  id="${uid}"
+  style="
+    position:relative;
+    width:100%;
+    height:auto;
+    aspect-ratio:16/9;
+    min-height:0;
+    overflow:hidden;
+    background:${C.background};
+  "
+>
+  <div
+    class="halftone-canvas"
+    style="
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+    "
+  ></div>
+</div>
+
+<script>
+(() => {
+
+const ROOT_ID =
+  ${JSON.stringify(uid)};
+
+const CONFIG =
+  ${JSON.stringify(config)};
+
+const VERTEX_SHADER =
+  ${JSON.stringify(vertexShader)};
+
+const FRAGMENT_SHADER =
+  ${JSON.stringify(fragmentShader)};
+
+
+function startHalftone() {
+
+  const THREE =
+    window.THREE;
+
+
+  const root =
+    document.getElementById(
+      ROOT_ID
+    );
+
+
+  if (
+    !THREE ||
+    !root
+  ) return;
+
+
+  const mount =
+    root.querySelector(
+      ".halftone-canvas"
+    );
+
+
+  const renderer =
+    new THREE.WebGLRenderer({
+      alpha: true,
+      antialias: false,
+      powerPreference:
+        "high-performance"
+    });
+
+
+  renderer.setPixelRatio(1);
+
+  renderer.setClearColor(
+    0x000000,
+    0
+  );
+
+  renderer.outputEncoding =
+    THREE.sRGBEncoding;
+
+
+  mount.appendChild(
+    renderer.domElement
+  );
+
+
+  const scene =
+    new THREE.Scene();
+
+
+  const camera =
+    new THREE.OrthographicCamera(
+      -1,
+      1,
+      1,
+      -1,
+      0,
+      1
+    );
+
+
+  const geometry =
+    new THREE.PlaneGeometry(
+      2,
+      2
+    );
+
+
+  let virtualWidth =
+    CONFIG.virtualWidth;
+
+
+  let virtualHeight =
+    CONFIG.virtualHeight;
+
+
+  const pointer = {
+    inside: false,
+
+    mouseX: .5,
+    mouseY: .5,
+
+    smoothX: .5,
+    smoothY: .5,
+
+    velocityX: 0,
+    velocityY: 0,
+
+    hover: 0
+  };
+
+
+  const uniforms = {
+
+    uImage: {
+      value: null
+    },
+
+    uImageSize: {
+      value:
+        new THREE.Vector2(
+          1,
+          1
+        )
+    },
+
+    uResolution: {
+      value:
+        new THREE.Vector2(
+          CONFIG.virtualWidth,
+          CONFIG.virtualHeight
+        )
+    },
+
+    uTile: {
+      value:
+        CONFIG.scale
+    },
+
+    uDashWidth: {
+      value:
+        CONFIG.width
+    },
+
+    uConnection: {
+      value:
+        CONFIG.connection
+    },
+
+    uOblique: {
+      value:
+        CONFIG.oblique
+    },
+
+    uLineAngle: {
+      value:
+        THREE.MathUtils.degToRad(
+          CONFIG.lineAngle
+        )
+    },
+
+    uPower: {
+      value:
+        CONFIG.power
+    },
+
+    uMinimumTone: {
+      value:
+        CONFIG.minimumTone
+    },
+
+    uContrast: {
+      value:
+        CONFIG.contrast
+    },
+
+    uPointer: {
+      value:
+        new THREE.Vector2(
+          .5,
+          .5
+        )
+    },
+
+    uPointerVelocity: {
+      value:
+        new THREE.Vector2(
+          0,
+          0
+        )
+    },
+
+    uHoverStrength: {
+      value: 0
+    },
+
+    uLightIntensity: {
+      value:
+        CONFIG.lightIntensity
+    },
+
+    uLightRadius: {
+      value:
+        CONFIG.lightRadius
+    },
+
+    uVerticalFade: {
+      value:
+        CONFIG.lightVerticalFade
+    },
+
+    uColor: {
+      value:
+        new THREE.Color(
+          CONFIG.color
+        )
+    }
+
+  };
+
+
+  const material =
+    new THREE.ShaderMaterial({
+
+      uniforms,
+
+      vertexShader:
+        VERTEX_SHADER,
+
+      fragmentShader:
+        FRAGMENT_SHADER,
+
+      transparent: true,
+
+      depthTest: false,
+
+      depthWrite: false
+
+    });
+
+
+  scene.add(
+    new THREE.Mesh(
+      geometry,
+      material
+    )
+  );
+
+
+  function resize() {
+
+    virtualWidth =
+      CONFIG.virtualWidth;
+
+    virtualHeight =
+      CONFIG.virtualHeight;
+
+
+    renderer.setSize(
+      virtualWidth,
+      virtualHeight,
+      false
+    );
+
+
+    renderer.domElement.style.width =
+      "100%";
+
+    renderer.domElement.style.height =
+      "100%";
+
+
+    uniforms
+      .uResolution
+      .value
+      .set(
+        virtualWidth,
+        virtualHeight
+      );
+
+  }
+
+
+  new ResizeObserver(
+    resize
+  ).observe(
+    root
+  );
+
+
+  const image =
+    new Image();
+
+
+  if (
+    /^https?:/i.test(
+      CONFIG.imageUrl
+    )
+  ) {
+
+    image.crossOrigin =
+      "anonymous";
+
+  }
+
+
+  image.onload =
+    () => {
+
+      uniforms
+        .uImageSize
+        .value
+        .set(
+          image.naturalWidth,
+          image.naturalHeight
+        );
+
+
+      const texture =
+        new THREE.Texture(
+          image
+        );
+
+
+      texture.wrapS =
+        THREE.ClampToEdgeWrapping;
+
+      texture.wrapT =
+        THREE.ClampToEdgeWrapping;
+
+      texture.generateMipmaps =
+        false;
+
+      texture.minFilter =
+        THREE.LinearFilter;
+
+      texture.magFilter =
+        THREE.LinearFilter;
+
+      texture.encoding =
+        THREE.sRGBEncoding;
+
+      texture.needsUpdate =
+        true;
+
+
+      uniforms.uImage.value =
+        texture;
+
+    };
+
+
+  image.src =
+    CONFIG.imageUrl;
+
+
+  function pointerMove(
+    event
+  ) {
+
+    const rect =
+      root.getBoundingClientRect();
+
+
+    const inside =
+      event.clientX >= rect.left &&
+      event.clientX <= rect.right &&
+      event.clientY >= rect.top &&
+      event.clientY <= rect.bottom;
+
+
+    if (!inside) {
+
+      pointer.inside =
+        false;
+
+      return;
+
+    }
+
+
+    const entered =
+      !pointer.inside;
+
+
+    const x =
+      (
+        event.clientX -
+        rect.left
+      ) /
+      Math.max(
+        rect.width,
+        1
+      );
+
+
+    const y =
+      (
+        event.clientY -
+        rect.top
+      ) /
+      Math.max(
+        rect.height,
+        1
+      );
+
+
+    const dx =
+      x -
+      pointer.mouseX;
+
+
+    const dy =
+      y -
+      pointer.mouseY;
+
+
+    pointer.mouseX =
+      x;
+
+    pointer.mouseY =
+      y;
+
+    pointer.inside =
+      true;
+
+
+    if (entered) {
+
+      pointer.smoothX =
+        x;
+
+      pointer.smoothY =
+        y;
+
+      return;
+
+    }
+
+
+    pointer.velocityX =
+      dx;
+
+    pointer.velocityY =
+      dy;
+
+  }
+
+
+  window.addEventListener(
+    "pointermove",
+    pointerMove,
+    {
+      passive: true
+    }
+  );
+
+
+  let previous =
+    performance.now();
+
+
+  function frame(now) {
+
+    const dt =
+      Math.min(
+        (
+          now -
+          previous
+        ) /
+        1000,
+        .05
+      );
+
+
+    previous =
+      now;
+
+
+    const fadeSpeed =
+      pointer.inside
+      ? CONFIG.fadeIn
+      : CONFIG.fadeOut;
+
+
+    pointer.hover +=
+      (
+        (
+          pointer.inside
+          ? 1
+          : 0
+        ) -
+        pointer.hover
+      )
+      *
+      (
+        1 -
+        Math.exp(
+          -fadeSpeed *
+          dt
+        )
+      );
+
+
+    pointer.smoothX +=
+      (
+        pointer.mouseX -
+        pointer.smoothX
+      ) *
+      CONFIG.follow;
+
+
+    pointer.smoothY +=
+      (
+        pointer.mouseY -
+        pointer.smoothY
+      ) *
+      CONFIG.follow;
+
+
+    pointer.velocityX *=
+      CONFIG.velocityDamping;
+
+
+    pointer.velocityY *=
+      CONFIG.velocityDamping;
+
+
+    uniforms
+      .uPointer
+      .value
+      .set(
+        pointer.smoothX,
+        1 -
+        pointer.smoothY
+      );
+
+
+    uniforms
+      .uPointerVelocity
+      .value
+      .set(
+        pointer.velocityX *
+        virtualWidth,
+
+        -pointer.velocityY *
+        virtualHeight
+      );
+
+
+    uniforms.uHoverStrength.value =
+      pointer.hover;
+
+
+    renderer.render(
+      scene,
+      camera
+    );
+
+
+    requestAnimationFrame(
+      frame
+    );
+
+  }
+
+
+  resize();
+
+  requestAnimationFrame(
+    frame
+  );
+
+}
+
+
+if (window.THREE) {
+
+  startHalftone();
+
+}
+
+else {
+
+  const script =
+    document.createElement(
+      "script"
+    );
+
+
+  script.src =
+    "https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js";
+
+
+  script.onload =
+    startHalftone;
+
+
+  document.head.appendChild(
+    script
+  );
+
+}
+
+})();
+<\\/script>`;
+
+}
+
+
+/* ============================================================
+   COPY
+============================================================= */
+
+async function copyText(
+  text
+) {
+
+  if (
+    navigator.clipboard &&
+    window.isSecureContext
+  ) {
+
+    await navigator.clipboard
+      .writeText(
+        text
+      );
+
+    return;
+
+  }
+
+
+  const textarea =
+    document.createElement(
+      "textarea"
+    );
+
+
+  textarea.value =
+    text;
+
+
+  textarea.style.position =
+    "fixed";
+
+  textarea.style.opacity =
+    "0";
+
+
+  document.body.appendChild(
+    textarea
+  );
+
+
+  textarea.focus();
+  textarea.select();
+
+
+  const success =
+    document.execCommand(
+      "copy"
+    );
+
+
+  textarea.remove();
+
+
+  if (!success) {
+
+    throw new Error(
+      "Copy failed"
+    );
+
+  }
+
+}
+
+
+copyButton.addEventListener(
+  "click",
+  async () => {
+
+    const original =
+      copyButton.textContent;
+
+
+    try {
+
+      await copyText(
+        buildEmbedCode()
+      );
+
+
+      copyButton.textContent =
+        "Copied — paste into Webflow";
+
+
+      setTimeout(
+        () => {
+
+          copyButton.textContent =
+            original;
+
+        },
+        1800
+      );
+
+    }
+
+    catch (error) {
+
+      console.error(
+        error
+      );
+
+
+      copyButton.textContent =
+        "Copy failed";
+
+    }
+
+  }
+);
+
+
+/* ============================================================
+   PANEL
+============================================================= */
+
+panelClose.addEventListener(
+  "click",
+  () => {
+
+    panel.style.display =
+      "none";
+
+    panelOpen.style.display =
+      "block";
+
+  }
+);
+
+
+panelOpen.addEventListener(
+  "click",
+  () => {
+
+    panel.style.display =
+      "block";
+
+    panelOpen.style.display =
+      "none";
+
+  }
+);
+
+
+/* ============================================================
+   RESET
+============================================================= */
+
+resetButton.addEventListener(
+  "click",
+  () => {
+
+    angleControl.input.value =
+      DEFAULTS.lineAngle;
+
+    obliqueControl.input.value =
+      DEFAULTS.oblique;
+
+    scaleControl.input.value =
+      DEFAULTS.scale;
+
+    widthControl.input.value =
+      DEFAULTS.width;
+
+    connectionControl.input.value =
+      DEFAULTS.connection;
+
+    contrastControl.input.value =
+      DEFAULTS.contrast;
+
+    powerControl.input.value =
+      DEFAULTS.power;
+
+    minimumToneControl.input.value =
+      DEFAULTS.minimumTone;
+
+    intensityControl.input.value =
+      DEFAULTS.lightIntensity;
+
+    radiusControl.input.value =
+      DEFAULTS.lightRadius;
+
+    followControl.input.value =
+      DEFAULTS.follow;
+
+
+    angleControl.update();
+    obliqueControl.update();
+    scaleControl.update();
+    widthControl.update();
+    connectionControl.update();
+    contrastControl.update();
+    powerControl.update();
+    minimumToneControl.update();
+    intensityControl.update();
+    radiusControl.update();
+    followControl.update();
+
+
+    lineColor.value =
+      DEFAULTS.color;
+
+
+    backgroundColor.value =
+      DEFAULTS.background;
+
+
+    lineColor.dispatchEvent(
+      new Event("input")
+    );
+
+
+    backgroundColor.dispatchEvent(
+      new Event("input")
+    );
+
+  }
+);
+
+
+/* ============================================================
+   LOOP
+============================================================= */
+
+let previous =
+  performance.now();
+
+
+function render(now) {
+
+  const dt =
+    Math.min(
+      (
+        now -
+        previous
+      ) /
+      1000,
+      .05
+    );
+
+
+  previous =
+    now;
+
+
+  const fadeSpeed =
+    pointer.inside
+    ? C.fadeIn
+    : C.fadeOut;
+
+
+  pointer.hover +=
+    (
+      (
+        pointer.inside
+        ? 1
+        : 0
+      ) -
+      pointer.hover
+    )
+    *
+    (
+      1 -
+      Math.exp(
+        -fadeSpeed *
+        dt
+      )
+    );
+
+
+  pointer.smoothX +=
+    (
+      pointer.mouseX -
+      pointer.smoothX
+    ) *
+    C.follow;
+
+
+  pointer.smoothY +=
+    (
+      pointer.mouseY -
+      pointer.smoothY
+    ) *
+    C.follow;
+
+
+  pointer.velocityX *=
+    C.velocityDamping;
+
+
+  pointer.velocityY *=
+    C.velocityDamping;
+
+
+  uniforms
+    .uPointer
+    .value
+    .set(
+      pointer.smoothX,
+      1 -
+      pointer.smoothY
+    );
+
+
+  uniforms
+    .uPointerVelocity
+    .value
+    .set(
+      pointer.velocityX *
+      virtualWidth,
+
+      -pointer.velocityY *
+      virtualHeight
+    );
+
+
+  uniforms.uHoverStrength.value =
+    pointer.hover;
+
+
+  renderer.render(
+    scene,
+    camera
+  );
+
+
+  requestAnimationFrame(
+    render
+  );
+
+}
+
+
+/* ============================================================
+   START
+============================================================= */
+
+root.style.background =
+  C.background;
+
+
+resize();
+
+
+loadImage(
+  currentImageSource
+);
+
+
+requestAnimationFrame(
+  render
+);
+
+
+/* ============================================================
+   API
+============================================================= */
+
+window.TwentyHalftone = {
+
+  config: C,
+
+  renderer,
+
+  loadImage,
+
+
+  downloadJpg() {
+
+    downloadButton.click();
+
+  },
+
+
+  downloadSvg() {
+
+    svgButton.click();
+
+  },
+
+
+  copyEmbed() {
+
+    copyButton.click();
+
+  }
+
+};
+
+})();
+</script>
