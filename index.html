@@ -1773,8 +1773,8 @@ float getLeftGroundMask(
 
   float contentMask =
     smoothstep(
-      .018,
-      .095,
+      .002,
+      .026,
       max(
         rawColor.r,
         max(
@@ -1923,6 +1923,19 @@ vec3 sampleHeroGroundExtension(
       0.0,
       .045,
       outsideDistance
+    );
+
+  float leftSeamMask =
+    getLeftGroundMask(screenUv);
+
+  stripMix =
+    max(
+      stripMix,
+      smoothstep(
+        .015,
+        .22,
+        leftSeamMask
+      )
     );
 
 
